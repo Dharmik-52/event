@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Decorator</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Animate.css CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold">
+                <img src="url_to_your_logo_image" alt="Event Decorator Logo">
+            </a>
+            <!-- Hamburger Menu for Mobile -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul class="hidden md:flex space-x-4">
+                <li><a href="#Home" class="hover:text-gray-400">Home</a></li>
+                <li><a href="#About us" class="hover:text-gray-400">About us</a></li>
+                <li><a href="#Types of Events" class="hover:text-gray-400">Types of Events</a></li>
+                <li><a href="#Events Gallery" class="hover:text-gray-400">Events Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 hidden">
+        <div class="flex justify-end p-4">
+            <button id="close-menu" class="text-white">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="text-white text-center">
+            <li class="py-4"><a href="#home" class="block">Home</a></li>
+            <li class="py-4"><a href="#About us" class="block">About us</a></li>
+            <li class="py-4"><a href="#Types of Events" class="block">Types of Events</a></li>
+            <li class="py-4"><a href="#Events Gallery" class="block">Events Gallery</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    
+    <section id="Home" class="hero bg-gray-900 text-white py-20" style="background-image: url('url_to_your_hero_image');">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Create Magical Events</h1>
+            <p class="text-lg md:text-xl mb-8">Events that make a difference</p>
+                 </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="AboutUs" class="py-12 bg-gray-100">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center">
+            <div class="w-3/12">
+                <img src="https://amazingeye.com/wp-content/themes/glacial/images/racine-center-lasik.jpg" alt="About" class="rounded-lg shadow-lg w-64 ml-20">
+            </div>
+            <div class="w-1/2 ml-36 mt-8 lg:mt-0">
+                <h2 class="text-3xl font-bold mb-4 text-gray-800">About Us</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">At Event Decorator, we specialize in creating memorable events and stunning decorations that leave a lasting impression. Our team of experienced professionals is dedicated to transforming your vision into reality, whether it's an elegant wedding, a fun-filled birthday party, or a sophisticated corporate event.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Types of Events Section -->
+    <section id="Types of Events" class="py-16 bg-gray-100">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Types of Events</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://www.shaadidukaan.com/vogue/wp-content/uploads/2020/02/theweddingdesigncompany-wedding-decor.jpg" alt="Event 1" class="w-3/10 m-auto">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Weddings</h3>
+                        <p class="text-gray-700">Weddings are undoubtedly one of the most cherished and elaborate social Events. </p>
+                    </div>
+                </div>
+                <!-- Event 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://partypropz.com/wp-content/uploads/2021/03/1-54.jpg " alt="Event 1" class="w-3/10 h-4/10 m-auto">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Birthday parties</h3>
+                        <p class="text-gray-700">Birthday parties celebrate the milestone of another year in a person's life. </p>
+                    </div>
+                </div>
+                <!-- Event 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <img src="https://partypropz.com/wp-content/uploads/2020/06/1-3-1536x1482.jpg" alt="Event 1" class="w-3/10 m-auto">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Anniversaries </h3>
+                        <p class="text-gray-700">Anniversaries mark the passage of time in a relationship, whether it's a marriage, partnership, or even a business venture. Couples celebrate their journey together and reflect on their achievements and growth. </p>
+                    </div>
+                </div>
+                
+                <!-- Add more events as needed -->
+            </div>
+        </div>
+    </section>
+   
+    <!-- Event Gallery -->
+    <section id="Events Gallery"
+        class="container mx-auto my-8 p-8 bg-white-800 bg-opacity-75 shadow-lg rounded-md animate__animated animate__fadeIn animate__delay-1s">
+        <h2 class="text-3xl font-bold text-center mb-8e">Event Gallery</h2>
+        <div class="flex flex-wrap -mx-4">
+
+            
+                <!-- Image 1 -->
+                <div
+                    class="bg-white-700 p-6 rounded-md transform hover:scale-105 transition duration-300 animated-element mr-4">
+                    <a href="https://www.shaadidukaan.com/vogue/wp-content/uploads/2020/02/theweddingdesigncompany-wedding-decor.jpg" data-lightbox="achievements"
+                        data-title="wedding Event">
+                        <img src="https://www.shaadidukaan.com/vogue/wp-content/uploads/2020/02/theweddingdesigncompany-wedding-decor.jpg" alt="Achievement Image 1"
+                            class="mt-4 rounded-md w-full h-40 object-cover">
+                    <h3 class="text-lg text-center font-semibold mb-2">Weddings</h3>
+                    </a>
+                    <!-- <p class="text-gray-300 mt-4">This is achieved from <b>freecodecamp.org</b></p> -->
+                </div>
+                <!-- Image 2 -->
+                <div
+                class="bg-white-700 p-6 rounded-md transform hover:scale-105 transition duration-300 animated-element">
+                <a href="https://partypropz.com/wp-content/uploads/2021/03/1-54.jpg" data-lightbox="achievements"
+                    data-title="birthday">
+                    <img src="https://partypropz.com/wp-content/uploads/2021/03/1-54.jpg" alt="Achievement Image 1"
+                        class="mt-4 rounded-md w-full h-40 object-cover">
+                <h3 class="text-lg text-center font-semibold mb-2">Birthday parties</h3>
+                </a>
+                <!-- <p class="text-gray-300 mt-4">This is achieved from <b>freecodecamp.org</b></p> -->
+            </div>
+             <!-- Image 3 -->
+            <div
+                class="bg-white-700 p-6 rounded-md transform hover:scale-105 transition duration-300 animated-element">
+                <a href="https://partypropz.com/wp-content/uploads/2020/06/1-3-1536x1482.jpg" data-lightbox="achievements"
+                    data-title="Anniversaries">
+                    <img src="https://partypropz.com/wp-content/uploads/2020/06/1-3-1536x1482.jpg" alt="Achievement Image 1"
+                        class="mt-4 rounded-md w-full h-40 object-cover">
+                        <h3 class="text-lg text-center font-semibold mb-2">Anniversaries</h3>
+                </a>
+            </div> </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Event Decorator. All rights reserved.</p>
+            <!-- Add your social media links -->
+            <div class="mt-4">
+                <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white ml-4"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white ml-4"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Font Awesome CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+    <!-- Script for Mobile Menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu-overlay').classList.remove('hidden');
+        });
+        document.getElementById('close-menu').addEventListener('click', function () {
+            document.getElementById('mobile-menu-overlay').classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>
