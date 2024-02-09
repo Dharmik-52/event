@@ -40,7 +40,7 @@
     </nav>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu-overlay" class="fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 hidden">
+    <div id="mobile-menu-overlay" class="fixed top-0 left-0 w-full h-1/2 bg-gray-900 hidden z-2">
         <div class="flex justify-end p-4">
             <button id="close-menu" class="text-white">
                 <i class="fas fa-times"></i>
@@ -56,26 +56,30 @@
 
     <!-- Hero Section -->
     
-    <section id="Home" class="hero bg-gray-900 text-white py-20" style="background-image: url('url_to_your_hero_image');">
+    <section id="Home" class="hero bg-gray-900 text-white py-20">
         <div class="container mx-auto text-center">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">Create Magical Events</h1>
             <p class="text-lg md:text-xl mb-8">Events that make a difference</p>
-                 </div>
+         </div>
     </section>
 
     <!-- About Section -->
-    <section id="About us" class="py-12 bg-gray-100">
-        <div class="container mx-auto flex flex-col lg:flex-row items-center">
-            <div class="w-3/12">
-                <img src="https://amazingeye.com/wp-content/themes/glacial/images/racine-center-lasik.jpg" alt="About" class="rounded-lg shadow-lg w-64 ml-20">
+    <section id="About us" class="py-16 bg-gray-200">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <!-- Image -->
+            <div class="col-span-1 lg:col-span-1 mb-8 lg:mb-0">
+                <img src="https://th.bing.com/th/id/OIP.leRaZskYpTKA55a0St0tZgHaJa?rs=1&pid=ImgDetMain" alt="About Image"  class="rounded-lg shadow-lg max-w-full h-auto">
             </div>
-            <div class="w-1/2 ml-36 mt-8 lg:mt-0">
-                <h2 class="text-3xl font-bold mb-4 text-gray-800">About Us</h2>
-                <p class="text-lg text-gray-700 leading-relaxed">At Event Decorator, we specialize in creating memorable events and stunning decorations that leave a lasting impression. Our team of experienced professionals is dedicated to transforming your vision into reality, whether it's an elegant wedding, a fun-filled birthday party, or a sophisticated corporate event.</p>
+            <!-- Text Description -->
+            <div class="col-span-1 lg:col-span-2">
+                <h2 class="text-3xl font-bold mb-4">About Us</h2>
+                <p class="text-lg text-gray-800 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt sem vitae augue tempus, at euismod dui tincidunt. Sed sit amet orci a nisi sodales ultrices. Pellentesque ut massa ac nulla fermentum tincidunt. In hac habitasse platea dictumst.</p>
+                <p class="text-lg text-gray-800 leading-relaxed">Donec vulputate magna eu orci viverra consequat. Curabitur fermentum, risus a hendrerit consectetur, leo purus blandit neque, in fringilla nisi turpis ac lorem. Fusce in diam nec libero finibus ultrices at in velit. Sed nec congue lectus.</p>
             </div>
         </div>
     </section>
     
+
 
     <!-- Types of Events Section -->
     <section id="Types of Events" class="py-16 bg-gray-100">
@@ -168,15 +172,20 @@
     <!-- Font Awesome CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 
-    <!-- Script for Mobile Menu -->
     <script>
-        document.getElementById('menu-toggle').addEventListener('click', function () {
-            document.getElementById('mobile-menu-overlay').classList.remove('hidden');
-        });
-        document.getElementById('close-menu').addEventListener('click', function () {
-            document.getElementById('mobile-menu-overlay').classList.add('hidden');
-        });
-    </script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const closeMenuButton = document.getElementById('close-menu');
+
+    menuToggle.addEventListener('click', function () {
+        mobileMenuOverlay.classList.remove('hidden');
+    });
+
+    closeMenuButton.addEventListener('click', function () {
+        mobileMenuOverlay.classList.add('hidden');
+    });
+</script>
+
 </body>
 
 </html>
